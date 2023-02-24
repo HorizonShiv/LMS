@@ -31,7 +31,6 @@ if (isset($_GET['complaint_id'])) {
 
     $complaint_id = $_GET['complaint_id'];
     $cat_type=$_GET['cat_type'];
-
     $obj = new delete();
     $obj->complaint_id = $complaint_id;
 

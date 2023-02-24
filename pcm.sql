@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Feb 24, 2023 at 04:36 AM
+-- Generation Time: Feb 24, 2023 at 07:34 AM
 -- Server version: 5.7.34
 -- PHP Version: 8.0.8
 
@@ -65,11 +65,38 @@ CREATE TABLE `complaint` (
 --
 
 INSERT INTO `complaint` (`complaint_id`, `user_id`, `err_id`, `cat_no`, `ip`, `complaint_type`, `complaint_desc`, `date`, `time`, `cat_type`, `status`) VALUES
-('2302154841', '161260107042', '12', '11', '127.0.0.1', 'hardware', 'computer will not turn on.', '2023-02-23', '15:48:41', 0, 0),
-('2302204144', '161260107042', '', 'LIB2', '127.0.0.1', 'LibEleP', 'Lights is not functioning', '2023-02-23', '20:41:44', 2, 0),
-('2302204227', '161260107042', '', '108', '127.0.0.1', 'ClsEleP', 'AC is not working properly', '2023-02-23', '20:42:27', 1, 0),
-('2302211651', '161260107042', '', '108', '127.0.0.1', 'ClsEnP', 'Black/White Board is broken', '2023-02-23', '21:16:51', 1, 0),
-('2302211701', '161260107042', '', 'LIB2', '127.0.0.1', 'LibEnP', 'Seating Arrangement is not good', '2023-02-23', '21:17:01', 2, 0);
+('2302154841', '161260107042', '12', '11', '127.0.0.1', 'hardware', 'computer will not turn on.', '2022-02-23', '15:48:41', 0, 0),
+('2302204227', '161260107042', '', '108', '127.0.0.1', 'ClsEleP', 'AC is not working properly', '2022-03-23', '20:42:27', 1, 1),
+('2302211651', '161260107042', '', '108', '127.0.0.1', 'ClsEnP', 'Black/White Board is broken', '2022-04-23', '21:16:51', 1, 0),
+('2402122447', '161260107042', '', 'LIB1', '127.0.0.1', 'LibEleP', 'Fan is not functioning', '2022-04-24', '12:24:47', 2, 0),
+('2402122825', '151260105045', '', '108', '127.0.0.1', 'ClsEnP', 'Black/White Board is broken', '2022-05-24', '12:28:25', 1, 0),
+('2402122909', '161260107042', 'c-32', '13', '127.0.0.1', 'hardware', 'computer turns on, but still does not work.', '2022-06-24', '12:29:09', 0, 0),
+('2402122944', '161260107043', '', 'LIB1', '127.0.0.1', 'LibEnP', 'Seating Arrangement is not good', '2022-07-24', '12:29:44', 2, 2),
+('2402123016', '171260105052', '75', '11', '127.0.0.1', 'hardware', 'keyboard is not working', '2022-08-24', '12:30:16', 0, 1),
+('2402123042', '171260107113', '', '108', '127.0.0.1', 'ClsEleP', 'Fan is not working properly', '2022-09-24', '12:30:42', 1, 1),
+('2402123112', '181260107024', '', 'LIB1', '127.0.0.1', 'LibEleP', 'Lights is not functioning', '2022-12-24', '12:31:12', 2, 0),
+('2402123135', '181260107032', '', '108', '127.0.0.1', 'ClsEleP', 'Fan is not working properly', '2022-10-24', '12:31:35', 1, 0),
+('2402123200', '181260107048', '', 'LIB1', '127.0.0.1', 'LibEleP', 'Fan is not functioning', '2022-11-24', '12:32:00', 2, 1),
+('2402123248', '181260107064', '543', '11', '127.0.0.1', 'hardware', 'computer has insufficient memory.', '2022-01-24', '12:32:48', 0, 0),
+('2402123319', '181260107065', '', 'LIB2', '127.0.0.1', 'LibEnP', 'Seating Arrangement is not good', '2023-02-21', '12:33:19', 2, 0),
+('2402123353', '181260107080', '', '108', '127.0.0.1', 'ClsEleP', 'Fan is not working properly', '2023-02-24', '12:33:53', 1, 2),
+('2402123414', '181260107080', '23', '13', '127.0.0.1', 'software', 'Some software are not available or working', '2023-02-18', '12:34:14', 0, 2),
+('2402123423', '181260107080', '', 'LIB2', '127.0.0.1', 'LibEleP', 'Lights is not functioning', '2023-02-10', '12:34:23', 2, 0),
+('2402123514', '191260105001', '545', '11', '127.0.0.1', 'other', 'plug is not working\r\n', '2023-02-19', '12:35:14', 0, 0),
+('2402123526', '191260105001', '', '108', '127.0.0.1', 'ClsEnP', 'Black/White Board is broken', '2023-02-20', '12:35:26', 1, 0),
+('2402123548', '191260105001', '', 'LIB2', '127.0.0.1', 'LibEleP', 'Fan is not functioning', '2023-02-11', '12:35:48', 2, 1),
+('2402123919', '191260105002', '123', '13', '127.0.0.1', 'hardware', 'computer turns on, but still does not work.', '2023-02-11', '12:39:19', 0, 0),
+('2402123927', '191260105002', '', '108', '127.0.0.1', 'ClsEleP', 'AC is not working properly', '2023-01-20', '12:39:27', 1, 0),
+('2402123935', '191260105002', '', 'LIB2', '127.0.0.1', 'LibEleP', 'Fan is not functioning', '2023-01-20', '12:39:35', 2, 0),
+('2402124006', '191260105005', 'w34', '13', '127.0.0.1', 'software', 'Too many virus', '2023-01-11', '12:40:06', 0, 2),
+('2402124018', '191260105005', '', '107', '127.0.0.1', 'ClsEleP', 'Fan is not working properly', '2023-02-11', '12:40:18', 1, 0),
+('2402124027', '191260105005', '', 'LIB2', '127.0.0.1', 'LibEleP', 'Fan is not functioning', '2023-02-09', '12:40:27', 2, 0),
+('2402124057', '191260105006', '45', '13', '127.0.0.1', 'software', 'get the blue screen of death.', '2023-02-06', '12:40:57', 0, 0),
+('2402124106', '191260105006', '', '107', '127.0.0.1', 'ClsEleP', 'AC is not working properly', '2023-01-03', '12:41:06', 1, 2),
+('2402124114', '191260105006', '', 'LIB1', '127.0.0.1', 'LibEleP', 'Lights is not functioning', '2023-02-24', '12:41:14', 2, 2),
+('2402124215', '191260105008', '2', '13', '127.0.0.1', 'software', 'Some software are not available or working', '2023-01-17', '12:42:15', 0, 0),
+('2402124235', '191260105008', '', '108', '127.0.0.1', 'ClsEnP', 'Banches are broken', '2023-02-24', '12:42:35', 1, 1),
+('2402124249', '191260105008', '', 'LIB1', '127.0.0.1', 'LibEnP', 'Seating Arrangement is not good', '2023-01-28', '12:42:49', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -875,7 +902,9 @@ INSERT INTO `user` (`user_id`, `password`, `name`, `mobile_number`, `profile`, `
 ('211260132034', '211260132034', 'PATEL ABHA JATINBHAI', 1234567890, NULL, 2, 'abc@gmail.com', 0),
 ('211260132036', '211260132036', 'SANDHI AAFIYABANU MOHAMMEDILYAS', 1234567890, NULL, 2, 'abc@gmail.com', 0),
 ('Admin', 'Admin123', 'HOD', 9999999999, 'HOD.jpg', 0, 'admin@gmail.com', 0),
+('heet12', 'heet12', 'Heet', 12345678890, NULL, 1, 'heet@gmail.com', 0),
 ('Jatin27', 'Jatin27', 'Jatin', 9913321234, NULL, 1, 'jatin@gmail.com', 0),
+('javlan12', 'javlan12', 'Javlan', 9876543210, NULL, 1, 'javlan@gmail.com', 0),
 ('Khyati12', 'Khyati12', 'Khyati', 9876543210, NULL, 1, 'khyati@gmail.com', 0),
 ('Sailesh@1113', 'Sailesh@1113', 'Sailesh', 9876543210, NULL, 1, 'shiv@gmail.com', 0),
 ('Shiv12', '1234', 'shiv', 9876543210, NULL, 1, 'shiv@gmail.com', 0);
