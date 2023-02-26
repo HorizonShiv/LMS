@@ -5,7 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>SAL - PCM</title>
+  <title>SAL - Campus Connect</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="../vendors/feather/feather.css">
   <link rel="stylesheet" href="../vendors/ti-icons/css/themify-icons.css">
@@ -43,7 +43,7 @@
 
   <div class="container-fluid bg-primary text-light">
     <div class="pl-5 pt-4 pb-3 d-flex flex-column">
-      <h3> College Management</h3>
+      <h3> Campus Connect</h3>
       <p class="fs-6 mt-1"> This portal is used for students and other education it will help them to manipulate thing in very efficent and structured way that save their time in day to day task.</p>
     </div>
   </div>
@@ -56,7 +56,7 @@
           <div class="col-lg-4 mx-auto">
             <div class="auth-form-light text-left py-5 px-4 px-sm-5">
               <div class="brand-logo">
-                <center><img src="../images/SAL.png" alt="logo" id="clg"></center>
+                <center><img src="../images/SAL.png" alt="logo" id="clg"></center><br>
               </div>
               <h4>Hello! let's get started</h4>
               <h6 class="font-weight-light">Sign in to continue.</h6>

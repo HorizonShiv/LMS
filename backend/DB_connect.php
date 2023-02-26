@@ -4,8 +4,8 @@ function dbconnection()
 {
 	$servername = "localhost";
 	$username = "root";
-	$password = "root";
-	$dbname = "pcm";
+	$password = "";
+	$dbname = "CampusConnect";
 
 	$conn = new mysqli($servername, $username, $password, $dbname);
 

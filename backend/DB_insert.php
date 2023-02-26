@@ -112,6 +112,7 @@ elseif (isset($_POST['add_student']) || isset($_POST['add_technician'])) {
                 $spreadsheet = \PhpOffice\PhpSpreadsheet\IOFactory::load($fileTmpname);
                 $data = $spreadsheet->getActiveSheet()->toArray();
                 foreach ($data as $row) {
+
                     if ($count > 0) {
                         $user_id = $row['0'];
                         $name = $row['1'];
@@ -119,11 +120,8 @@ elseif (isset($_POST['add_student']) || isset($_POST['add_technician'])) {
                         $password = $user_id;
                         $email = $row['3'];
 
-                        if ($_GET['role'] == 1) {
-                            $role = 1;
-                        } elseif ($_GET['role'] == 2) {
-                            $role = 2;
-                        }
+                            $role = $_GET['role'];
+                        
 
                         
                         require_once("cls_insert.php");
@@ -135,27 +133,21 @@ elseif (isset($_POST['add_student']) || isset($_POST['add_technician'])) {
                         $obj->role = $role;
                         $obj->email = $email;
                         $result = $obj->UserAdd();
+
+                        if ($result == TRUE) {
+                            if ($role == 1) {
+                                header('Location:../pages/view_technician.php?role=1');
+                            } elseif ($_GET['role'] == 2) {
+                                header('Location:../pages/view_student.php?role=2');
+                            }
+                        } 
+
                     } else {
-                        $count = "1";
-                    }
-                }
-
-                if ($result == TRUE) {
-
-                    if ($_GET['role'] == 1) {
-                        header('Location:../pages/view_technician.php?role=1');
-                    } elseif ($_GET['role'] == 2) {
-                        header('Location:../pages/view_student.php?role=2');
-                    }
-                } else {
-                    if ($_GET['role'] == 1) {
-                        header('Location:../pages/view_technician.php?role=1');
-                    } elseif ($_GET['role'] == 2) {
-                        header('Location:../pages/view_student.php?role=2');
+                        $count++;
                     }
                 }
             }
-            else{
+            elseif($fileSize > 1000000){
                 echo 'too large';
             }
         }

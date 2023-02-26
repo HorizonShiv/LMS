@@ -303,9 +303,14 @@
                                         endif;
                                         ?>
 
-
+                                       
                                     </tbody>
                                 </table>
+                                <?php 
+                                    echo '<a class="btn btn-inverse-primary btn-sm" name="" href="../pages/pdf_download12.php?ct=' . $_GET['cat_type'] . '&cat=' . 0 . '">Download PDF (Pending)</a>';
+                                    echo '<a class="btn btn-inverse-primary btn-sm ml-3" name="" href="../pages/pdf_download12.php?ct=' . $_GET['cat_type'] . '&cat=' . 1 . '">Download PDF (In Progress)</a>';
+                                    echo '<a class="btn btn-inverse-primary btn-sm ml-3" name="" href="../pages/pdf_download12.php?ct=' . $_GET['cat_type'] . '&cat=' . 2 . '">Download PDF (Completed)</a>';
+                                ?>
                             </div>
                         </div>
                     </div>

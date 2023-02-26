@@ -128,6 +128,7 @@
           "rgba(142, 151, 117,0.2)",
           "rgba(26, 77, 46,0.2)",
           "rgba(80,63,63,0.2)",
+          "rgba(100,70,100,0.2)",
 
         ],
         borderColor: [
@@ -144,6 +145,7 @@
           "rgba(142, 151, 117,1)",
           "rgba(26, 77, 46,1)",
           "rgba(80,63,63,1)",
+          "rgba(100,70,100,1)",
         ],
         borderWidth: 1,
         fill: false,
@@ -167,6 +169,7 @@
         },
       },
     };
+
 
     var doughnutPieData = {
       datasets: [{
@@ -193,6 +196,31 @@
       labels: ["Pending", "In Progress", "Completed"],
     };
 
+     var doughnutPieData1 = {
+      datasets: [{
+        data: [<?php echo $lab_complaints . "," . $class_complaints . "," . $library_complaints;  ?>],
+        backgroundColor: [
+          // "rgba(255, 99, 132, 0.5)",
+          // "rgba(255, 206, 86, 0.5)",
+          // "rgba(54, 162, 235, 0.5)",
+          "rgba(75, 192, 192, 0.5)",
+          "rgba(153, 102, 255, 0.5)",
+          "rgba(255, 159, 64, 0.5)",
+        ],
+        borderColor: [
+          // "rgba(255,99,132,1)",
+          // "rgba(255, 206, 86, 1)",
+          // "rgba(54, 162, 235, 1)",
+          "rgba(75, 192, 192, 1)",
+          "rgba(153, 102, 255, 1)",
+          "rgba(255, 159, 64, 1)",
+        ],
+      }, ],
+
+      // These labels appear in the legend and in the tooltips when hovering different arcs
+      labels: ["Lab Complaints", "Class Complaints", "Library Complaints"],
+    };
+
     var doughnutPieOptions = {
       responsive: true,
       animation: {
@@ -201,6 +229,10 @@
       },
     };
 
+
+    
+
+    
     // Get context with jQuery - using jQuery's .get() method.
     if ($("#barChart").length) {
       var barChartCanvas = $("#barChart").get(0).getContext("2d");
@@ -231,25 +263,35 @@
       });
     }
 
-    if ($("#pieChart").length) {
-      var pieChartCanvas = $("#pieChart").get(0).getContext("2d");
-      var pieChart = new Chart(pieChartCanvas, {
-        type: "pie",
-        data: doughnutPieData,
+    if ($("#doughnutChart1").length) {
+      var doughnutChartCanvas = $("#doughnutChart1").get(0).getContext("2d");
+      var doughnutChart = new Chart(doughnutChartCanvas, {
+        type: "doughnut",
+        data: doughnutPieData1,
         options: doughnutPieOptions,
       });
     }
 
-    if ($("#browserTrafficChart").length) {
-      var doughnutChartCanvas = $("#browserTrafficChart")
-        .get(0)
-        .getContext("2d");
-      var doughnutChart = new Chart(doughnutChartCanvas, {
-        type: "doughnut",
-        data: browserTrafficData,
-        options: doughnutPieOptions,
-      });
-    }
+    // if ($("#pieChart").length) {
+    //   var pieChartCanvas = $("#pieChart").get(0).getContext("2d");
+    //   var pieChart = new Chart(pieChartCanvas, {
+    //     type: "pie",
+    //     data: doughnutPieData,
+    //     options: doughnutPieOptions,
+    //   });
+    // }
+
+    // if ($("#browserTrafficChart").length) {
+    //   var doughnutChartCanvas = $("#browserTrafficChart")
+    //     .get(0)
+    //     .getContext("2d");
+    //   var doughnutChart = new Chart(doughnutChartCanvas, {
+    //     type: "doughnut",
+    //     data: browserTrafficData,
+    //     options: doughnutPieOptions,
+    //   });
+    // }
+
   });
 </script>
 
